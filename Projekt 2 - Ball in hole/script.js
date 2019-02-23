@@ -143,6 +143,8 @@ function checkHoles()       // Check holes(removoing duplicate holes)
 function randomWinHole(i)    // Creating win hole in random location
 {                                 
     let winHole = Math.floor(Math.random()*holes.length);
+    if(winHole ==i&&i<holes.length){i++;}    
+    else{i--;}
     holes[winHole].classList.remove("hole");
     holes[winHole].classList.add("winHole")
 
