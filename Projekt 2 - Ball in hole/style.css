@@ -4,8 +4,8 @@
     border-radius: 50%;
     background: blue;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
   }
   .container{
       overflow: hidden;
@@ -14,9 +14,9 @@
     position: absolute;
     top: 40%;
     left: 40%;
-    width: 200px;
+    width: 210px;
     height: 150px;
-    font-size: 3em;
+    font-size: 45px;
     border-radius: 10px;
   }
   .hole, .winHole, .tempHole{
