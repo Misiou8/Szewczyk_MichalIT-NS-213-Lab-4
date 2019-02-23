@@ -1,0 +1,45 @@
+body{
+    font-size: 35px !important;
+    color: white !important;
+    font-family: 'Lato', sans-serif !important;
+}
+.bg {
+    background: url(perkusja.jpg);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background-size: 100%;
+}
+
+.buttons{
+    margin-bottom: 50px;
+}
+
+ #play{
+    margin-left: 10px;
+    background: white;
+    color: black;
+}
+
+#rec1, #rec2, #rec3, #rec4{
+    margin-right: 30px;
+    border: rgb(255, 0, 0);
+    background: rgb(255, 0, 0);
+    color: black;
+}
+
+.soundBlock{
+    border: solid white 1px;
+    border-radius: 10px;
+    text-align: center;
+    height: 120px;
+    margin-bottom: 10px;
+    min-width: 320px;
+} 
+
+audio{
+    margin-right: auto;
+    margin-left: auto;
+    display:block;
+}
