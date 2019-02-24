@@ -1,0 +1,89 @@
+body {
+  background: url(background.png);
+  position: absolute;
+  z-index: -1;
+  background-size: 100%;
+}
+textarea {
+  resize: none;
+  
+}
+.firstNote {
+  color: #fff;
+  margin-left: 40px;
+  border-radius: 5px;
+  padding: 20px;
+  order: 0;
+}
+.firstNote .noteDesc{
+  margin-top: 10px;
+}
+.firstNote .noteTitle{
+  height: 30px;
+}
+.firstNote footer{
+  padding-top: 10px;
+  text-align: right;
+}
+.note {
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  order: 2;
+  display: inline;
+}
+
+.noteDesc{
+  height: 120px;
+
+}
+.noteTitle, .noteDesc{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+.noteFooter button, .noteFooter input{
+  float: right;
+  border-radius: 4px;
+}
+#wrapper {
+
+  width: 100%;
+  display: grid;
+  grid-template-columns:repeat(auto-fill, 400px);
+  grid-auto-flow: row;
+  grid-gap: 10px;
+  justify-content: center;
+}
+.header {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  font-family: 'Merriweather', serif;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+.holder{
+  display: inline-block;
+}
+.color{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.red{
+  background: rgb(226, 102, 102);
+}
+.black{
+  background: hsl(0, 2%, 10%);
+}
+.yellow{
+  background: #d6d645;
+}
+.blue{
+  background: #5ab3d6;
+}
+.green{
+  background: rgb(76, 223, 120);
+}
