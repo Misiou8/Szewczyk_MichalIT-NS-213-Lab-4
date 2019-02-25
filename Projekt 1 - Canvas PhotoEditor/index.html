@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Canvas PhotoEditor</title>
+    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-canvas">
+      <label>
+        <div class="canvas-empty">
+          <input type="file" name="file" id="file">
+          <h2>Aby wczytać obraz, kliknij tutaj...</h2>
+        </div>
+      </label>
+      <canvas id="canvas" width="1" height="1"></canvas>
+      <a onclick="onSaveFile()" class="save-btn disabled" download="new_image.jpg">Zapisz obraz</a>
+    </div>
+
+    <div class="container-controls">
+
+      <div class="controls">
+        <div class="controls_slider sliders-container">
+          <input type="range" min="-255" max="255" class="slider" oninput="onChangeBrightness(this.value)" id="brightness-slider">
+          <input type="range" min="0" max="5" step="0.05" class="slider" oninput="onChangeContrast(this.value)" id="contrast-slider">
+          <input type="range" min="0" max="2.5" step="0.01" class="slider" oninput="onChangeGamma(this.value)" id="gamma-slider">
+          <input type="range" min="-255" max="255" class="slider" oninput="onChangeHueR(this.value)" id="hue-slider-r">
+          <input type="range" min="-255" max="255" class="slider" oninput="onChangeHueG(this.value)" id="hue-slider-g">
+          <input type="range" min="-255" max="255" class="slider" oninput="onChangeHueB(this.value)" id="hue-slider-b">
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox" value="grayscale" onclick="onChangeFilter(this.value, this.checked)" id="grayscale-checkbox">
+            <span class="checkmark"></span>
+            Skala szarości
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox" value="negative" onclick="onChangeFilter(this.value, this.checked)" id="negative-checkbox">
+            <span class="checkmark"></span>
+            Negatyw
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox" value="sepia" onclick="onChangeFilter(this.value, this.checked)" id="sepia-checkbox">
+            <span class="checkmark"></span>
+            Sepia
+          </label>
+        </div>
+
+        <div class="controls_button">
+          <label>
+            <input type="radio" name="option" value="brightness" disabled>
+            Jasność
+          </label>
+        </div>
+        <div class="controls_button">
+          <label>
+            <input type="radio" name="option" value="contrast" disabled>
+            Kontrast
+          </label>
+        </div>
+        <div class="controls_button">
+          <label>
+            <input type="radio" name="option" value="gamma" disabled>
+            Gamma
+          </label>
+        </div>
+        <div class="controls_button">
+          <label>
+            <input type="radio" name="option" value="hue" disabled>
+            Odcień
+          </label>
+        </div>
+        <div class="controls_button">
+          <label>
+            <input type="radio" name="option" value="filters" disabled>
+            Filtry
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="methods.js"></script>
+  </body>
+</html>
