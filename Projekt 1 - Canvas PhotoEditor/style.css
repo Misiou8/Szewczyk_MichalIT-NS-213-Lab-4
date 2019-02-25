@@ -1,0 +1,230 @@
+html {
+    font-size: 10px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-family: 'Coiny', cursive;
+    background-color: #ffe0e0;
+  }
+  
+  .container-canvas {
+    width: 100vw;
+    max-height: 90vh;
+    box-sizing: border-box;
+  }
+  
+  .container-controls {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #303036;
+    width: 100vw;
+    min-height: 10vh;
+    box-sizing: border-box;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+  .canvas-empty {
+    width: 60vw;
+    height: 60vh;
+    border: 4px dashed #303036;
+    margin: 50px auto;
+  }
+  
+  .canvas-empty h2 {
+    color: #303036;
+    text-align: center;
+    margin-top: 27vh;
+    font-size: 1.8rem;
+  }
+  
+  .canvas-empty:hover {
+    cursor: pointer;
+    background-color: #f8d1d1b0;
+  }
+  
+  #file {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+  }
+  
+  #canvas {
+    margin: 50px auto;
+    position: absolute;
+  }
+  
+  .save-btn {
+    position: fixed;
+    top: 10px;
+    right: 25px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #303036;
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Coiny', cursive;
+  }
+  
+  .save-btn.disabled {
+    pointer-events: none;
+  }
+  
+  .controls {
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  
+  .controls_slider {
+    margin-bottom: 40px;
+    transition-duration: 200ms;
+    -webkit-transition-duration: 200ms;
+    opacity: 0;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25%;
+    height: 2px;
+    background: #e9e9e9;
+    outline: none;
+    position: absolute;
+    top: 20px;
+    left: 38%;
+  }
+  
+  #hue-slider-r {
+    left: 12%;
+  }
+  #hue-slider-b {
+    left: 64%;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #0090ea;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #0090ea;
+  }
+  
+  .slider#hue-slider-r::-webkit-slider-thumb {
+    background: #ea0023;
+  }
+  .slider#hue-slider-r::-moz-range-thumb {
+    background: #ea0023;
+  }
+  .slider#hue-slider-g::-webkit-slider-thumb {
+    background: #00ea17;
+  }
+  .slider#hue-slider-g::-moz-range-thumb {
+    background: #00ea17;
+  }
+  .slider#hue-slider-b::-webkit-slider-thumb {
+    background: #0090ea;
+  }
+  .slider#hue-slider-b::-moz-range-thumb {
+    background: #0090ea;
+  }
+  
+  .checkbox {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    top: 25px;
+    color: #ffe0e0;
+    margin-right: 25px;
+    font-size: 15px;
+    font-family: 'Coiny', cursive;
+    cursor: pointer;
+    padding: 13px;
+  }
+  
+  .checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 11px;
+    left: -10px;
+    height: 15px;
+    width: 15px;
+    background-color: #efefff;
+    border-radius: 2px;
+  }
+  
+  .checkmark:after {
+    display: none;
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .checkbox input:checked ~ .checkmark {
+    background-color: #cc0000;
+  }
+  .checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .controls_button {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    color: #ffe0e0;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .controls_button input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .controls_button label {
+    font-size: 25px;
+    display: block;
+    cursor: pointer;
+    font-family: 'Coiny', cursive;
+  }
+  
+  #canvas-rows, #canvas-trails, #canvas-movement {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+  }
+  
